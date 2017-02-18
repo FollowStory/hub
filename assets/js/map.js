@@ -1,12 +1,3 @@
-
-  
-
-
-  
-
-
-<div id="map"></div>
-<script type="text/javascript">
 mapboxgl.accessToken = 'pk.eyJ1IjoicHJhc2hhbnRrdXJ1cCIsImEiOiJjaXE2Yms0MmQwMDdzZnNra2VzcHE1OTQ3In0.gxsfnSyKvnldYpA-Uhul0A';
 var map = new mapboxgl.Map({
     container: "map",
@@ -91,6 +82,3 @@ map.on("load", function() {
         "filter": ["==", "$type", "Point"],
     });
 });
-</script>
-
-</div>
