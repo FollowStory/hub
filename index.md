@@ -1,56 +1,10 @@
 ---
-layout: map
-map: raster
-title: OpenStreetMap India
+layout: home
+title: Home
+landing-title: 'Follow the world's best stories'
+description: null
+image: null
+author: null
 ---
 
-<section class="map-container {{page.map}}">
-
-  <div id='map'></div>
-
-</section>
-
-<script>
-    // Lock to India bounds
-    var southWest = L.latLng(7.319, 61.523),
-        northEast = L.latLng(36.774, 100.635),
-        bounds = L.latLngBounds(southWest, northEast);
-    // Provide your access token
-    L.mapbox.accessToken = 'pk.eyJ1Ijoib3BlbnN0cmVldG1hcCIsImEiOiJhNVlHd29ZIn0.ti6wATGDWOmCnCYen-Ip7Q';
-    // Definte tile urls of each layer
-    var indiaMap = L.mapbox.tileLayer('openstreetmap.1b68f018'),
-        bhuvanSatellite = L.tileLayer('http://tile1.nrsc.gov.in/tilecache/tilecache.py/1.0.0/bhuvan_imagery2/{z}/{x}/{y}.jepg', {
-            attribution: 'NRSC/ISRO'
-        }),
-        postalMap = L.mapbox.tileLayer('planemad.9acc2036'),
-        // truemarbleSatellite = L.mapbox.tileLayer('planemad.e76fee83'),
-        highwaysMap = L.mapbox.tileLayer('planemad.66359ac0'),
-        connectivityGraph = L.mapbox.tileLayer('planemad.5504651b'),
-        railwayMap = L.mapbox.tileLayer('planemad.e5dd1290');
-    var baseLayers = {
-        "Railway Map": railwayMap,
-        "Bhuvan Satellite": bhuvanSatellite,
-        // "NASA Satellite": truemarbleSatellite,
-        "OpenStreetMap India": indiaMap
-    };
-    var overlayMaps = {
-        "Highway": highwaysMap,
-        "Postal Codes": postalMap,
-        "Connectivity": connectivityGraph
-    };
-    // Create a map in the div #map
-    var map = L.map('map', {
-            layers: indiaMap
-        }, {
-            maxBounds: bounds,
-        })
-        .addControl(L.mapbox.geocoderControl('mapbox.places', {
-            autocomplete: true
-        }))
-        .setView([22.14980, 79.08060], 5);
-    L.hash(map);
-    //Add layer control
-    L.control.layers(baseLayers, overlayMaps, {
-        position: 'topleft'
-    }).addTo(map);
-</script>
+Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.
